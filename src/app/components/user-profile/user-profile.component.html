@@ -1,0 +1,34 @@
+<h1 #myHeading>User - {{name | uppercase}} Status - 
+{{isSingle?"Single":"Married"}}
+Salary - {{salary}}
+</h1>
+<!--  for hightligh font -->
+<!-- <h2>Phone: {{phoneno | countryCode}}</h2> -->
+<button (click)="sendData()">Send Data</button>
+<!-- 
+Name: {{name.toLocaleUpperCase()}} Status - {{status}} Salary - {{salary}} 
+<button [disabled]="isButtonDisabled">Click Me</button>
+<h1>Input value is {{inputVal}}</h1>
+
+<input [value]="inputVal" type="text" 
+    (input)="onChange($event)" /> -- >
+<input [value]="inputVal" type="text" [(ngModel)] = "inputVal" />
+<div>
+    @for (user of users; track user.name) {
+        @if(user.salary > 1800) {
+            <h4>Name: {{user.name.toLocaleUpperCase()}} Status - {{user.isSingle?"Single":"Married"}} Salary - Big Sal: {{user.salary}} </h4>
+        }@else{
+        <h4>Name: {{user.name.toLocaleUpperCase()}} Status - {{user.isSingle?"Single":"Married"}} Salary - 
+             Small{{user.salary}} </h4>
+        }
+    }
+</div> -- >
+
+<div *ngFor ="let user of users">
+        <h4 *ngIf="user.salary > 2000; else elseBlock">Name: {{user.name.toLocaleUpperCase()}} Status - {{user.isSingle?"Single":"Married"}} Salary - 
+             Small{{user.salary}} </h4>
+        <ng-template #elseBlock>
+            <h4>Name: {{user.name.toLocaleUpperCase()}} Status - {{user.isSingle?"Single":"Married"}} Salary - 
+                Small{{user.salary}} </h4>
+        </ng-template>
+</div> -->
